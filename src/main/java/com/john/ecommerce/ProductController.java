@@ -26,14 +26,7 @@ public class ProductController {
         return productRepository.findAll();
     }
 
-       @GetMapping("/search-vulnerable")
-    public List<Map<String, Object>> searchVulnerable(@RequestParam String name) {
-        // Correggi qui: 'product' (singolare) e '=' (singolo uguale)
-        String sql = "SELECT * FROM product WHERE name = '" + name + "'"; 
-        System.out.println("SQL ESEGUITO: " + sql); 
-        return jdbcTemplate.queryForList(sql);
-    }
-
+  
     @GetMapping("/search-safe")
     public List<Map<String, Object>> searchSafe(@RequestParam String name) {
         // Correggi anche qui: 'product' (singolare)
