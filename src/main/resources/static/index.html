@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio E-commerce</title>
+    <!-- Colleghiamo il file CSS esterno -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🛒 Il Mio E-commerce</h1>
+
+    <div class="form-container">
+        <input type="text" id="productName" placeholder="Nome prodotto (es. Tastiera)" required>
+        <input type="number" id="productPrice" step="0.01" placeholder="Prezzo (es. 49.99)" required>
+        <button onclick="addProduct()">Aggiungi Prodotto</button>
+    </div>
+
+    <div id="products-grid" class="products-grid">
+        <!-- I prodotti verranno inseriti qui da JavaScript -->
+    </div>
+</div>
+
+<!-- Colleghiamo il file JavaScript esterno alla fine del body -->
+<script src="/js/app.js"></script>
+</body>
+</html>
